@@ -1,0 +1,31 @@
+<text class="title" color="white">这是您的检测结果</text>
+<view class="palmimg">
+<van-image
+  round
+  cover
+  width="10rem"
+  height="10rem"
+  show-loading
+  show-error  
+  src="{{palm_img}}"
+/>
+</view>
+
+<view class="palmimg" >
+  <image src="{{result}}" show-menu-by-longpress></image>
+</view>
+
+<view class="wordsv" >
+  <text class="words">{{palm_words}}</text>
+</view>
+
+<view class="palmimg" >
+  <image src="{{palm_yolo}}" show-menu-by-longpress></image>
+</view>
+
+<view class="palmimg" >
+  <image src="{{palm_crop}}" show-menu-by-longpress></image>
+</view>
+<view class="palmimg" >
+  <image src="{{palm_align}}" show-menu-by-longpress></image>
+</view>

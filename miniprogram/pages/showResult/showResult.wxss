@@ -1,0 +1,38 @@
+/* pages/showResult/showResult.wxss */
+page{
+  background-color: rgb(16, 31, 58);
+}
+
+.title{
+  color: white;
+  margin: 30rpx;
+}
+.palmimg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20rpx;
+}
+.result1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:white;
+  margin: 30rpx;
+  border-color: ivory;
+  border-radius: 5%;
+  box-shadow: thistle;
+}
+.wordsv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(16, 31, 58);
+  margin: 30rpx;
+  border-color: ivory;
+  border-radius: 5%;
+  box-shadow: thistle;
+}
+.words{
+  color: white;
+}

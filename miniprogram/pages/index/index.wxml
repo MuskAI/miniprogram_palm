@@ -1,0 +1,28 @@
+<view>
+  <swiper indicator-dots="true" circular="true"
+    autoplay="true" interval="5000" duration="1000">
+    <swiper-item class="swiper">
+      <image src="https://img-blog.csdn.net/20180413145539360?" mode="widthFix"></image>
+      
+    </swiper-item>
+    <swiper-item class="swiper">
+      <image src="../../images/example.jpg" mode="widthFix"></image>
+      
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<view class="title">
+    <text class="h1">欢迎使用AI看掌诊病</text>
+    <text class="p2">　　早在两千多年前，我国古典医学著作《黄帝内经》就认为人体局部与整体是辩证统一的。这就决定了可以通过五官、手掌等外部变化来判断内脏的健康状况</text>
+    <text class="p1">请以如图的方式上传</text>
+    <text class="p1">要保证笑脸标记的五个点都在图像中</text>
+    
+ 
+<image src="../../images/example.jpg" mode="aspectFit" ></image>
+</view>
+
+<view class="upload">
+  <van-button bindtap="pushTakePhoto" size="large" round color="linear-gradient(to right, #4bb0ff, #6149f6)">点击拍照</van-button>
+</view>
