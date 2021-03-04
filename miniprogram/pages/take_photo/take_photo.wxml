@@ -1,0 +1,27 @@
+<!-- <cu-custom bgColor="bg-white" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">拍照上传</view>
+</cu-custom> -->
+
+<view style="height:40rpx"></view>
+<view class="text-center text-bold">
+  <view class="padding">请以如图的方式上传</view>
+  <view class="padding">要保证笑脸标记的五个点都在图像中</view>
+  <image src="../../images/example.jpg" mode="aspectFit"></image>
+  <view class="padding">您上传的照片仅程序内部可见</view>
+</view>
+
+
+<view class="grid col-2 grid-square flex-sub" style="position:relative;left:180rpx">
+  <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+    <image src='{{imgList[index]}}' mode='aspectFit'></image>
+    <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+      <text class="cuIcon-close"></text>
+    </view>
+  </view>
+  <view class="solids bg-white" bindtap="ChooseImage" wx:if="{{imgList.length<1}}">
+    <text class="cuIcon-cameraadd"></text>
+  </view>
+</view>
+
+<button class="text-white" style="background-color:#41c8a4;width:600rpx">下一步</button>

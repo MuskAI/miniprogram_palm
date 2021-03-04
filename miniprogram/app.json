@@ -14,17 +14,39 @@
     "pages/im/im",
     "pages/im/room/room",
     "pages/takePhoto/takePhoto",
+    "pages/my/my",
+    "pages/take_photo/take_photo",
     "pages/showResult/showResult"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
+    
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "AI掌纹诊病",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "selectedColor": "#2db7f5",
+    "color": "#909090",
+    "list": [
+      {
+        "text": "诊断",
+        "iconPath": "images/exam-off.png",
+        "selectedIconPath": "images/exam-on.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-select.png",
+        "pagePath": "pages/my/my"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom",
     "van-button": "@vant/weapp/button/index"
   }
 }

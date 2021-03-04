@@ -8,7 +8,10 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-
+    swiperList:{
+      url: '/images/logo.png',
+      url: '/images/example.png',
+    },
     indicatorDots: true,
     vertical: false,
     autoplay: false,
@@ -81,7 +84,12 @@ Page({
       }
     })
   },
-
+  gototakephoto(){
+    console.log('gototakephoto')
+    wx.navigateTo({
+      url: '/pages/take_photo/take_photo',
+    })
+  },
 
   pushTakePhoto: function () {
     console.log('ok')
