@@ -1,6 +1,7 @@
 //app.js
 App({
   globalData :{
+    userInfo:{},
     result :'',
     palm_img: '',
     palm_yolo:'',

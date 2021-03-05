@@ -1,17 +1,59 @@
 // pages/my/my.js
+const db = wx.cloud.database();
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    nickName: "", //保存昵称
+    avatarUrl: "",//保存头像
   },
-
+  //用户登录授权
+  getuserInfo(e) {
+    wx.cloud.callFunction({
+      name: 'login',//调用云函数获取用户唯一openid
+      complete: res => {
+        console.log(res)
+        const openid = res.result.openid
+        db.collection('user').where({
+          _openid: openid
+        }).get().then(res => {
+          console.log(res)
+          //确保数据库只有一份该用户的信息
+          if (res.data == "") {
+            console.log("授权登录成功")
+            this.setData({
+              isFirstLogin: 1
+            })
+            db.collection('user').add({
+              data: {
+                nickName: e.detail.userInfo.nickName,
+                avatarUrl: e.detail.userInfo.avatarUrl,
+              }
+            })
+          } else {
+            console.log("已经登录过不用授权") 
+          }
+        })
+      }
+    })
+    this.setData({
+      nickName: e.detail.userInfo.nickName,
+      avatarUrl: e.detail.userInfo.avatarUrl
+    })
+    wx.setStorageSync('nickName', e.detail.userInfo.nickName)
+    wx.setStorageSync('avatarUrl', e.detail.userInfo.avatarUrl)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      nickName:wx.getStorageSync('nickName'),
+      avatarUrl: wx.getStorageSync('avatarUrl')
+    })
 
   },
 

@@ -1,2 +1,39 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<scroll-view scroll-y class="scrollPage">
+  <view class="begin">
+    <button wx:if="{{!nickName}}" class="button text-white" hover-class="button-hover" open-type="getUserInfo" bindgetuserinfo="getuserInfo"
+    >点击微信授权</button>
+    <view class="flex padding-xl">
+      <image src="{{avatarUrl}}" class="round head"></image>
+      <view class="padding text-xl text-bold">{{nickName}}</view>
+    </view>
+  </view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/about/about" hover-class="none">
+        <image src="/images/logo.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">我的报告</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">我的档案</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="showQrcode">
+        <text class="cuIcon-appreciatefill text-red"></text>
+        <text class="text-grey">邀请好友</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">帮助与反馈</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

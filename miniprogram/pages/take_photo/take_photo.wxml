@@ -11,7 +11,6 @@
   <view class="padding">您上传的照片仅程序内部可见</view>
 </view>
 
-
 <view class="grid col-2 grid-square flex-sub" style="position:relative;left:180rpx">
   <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
     <image src='{{imgList[index]}}' mode='aspectFit'></image>
@@ -24,4 +23,4 @@
   </view>
 </view>
 
-<button class="text-white" style="background-color:#41c8a4;width:600rpx">下一步</button>
+<button class="text-white" style="background-color:#41c8a4;width:600rpx" bindtap="gonext">下一步</button>

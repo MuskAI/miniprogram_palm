@@ -110,7 +110,6 @@ Page({
           formData: {
             'user': 'test'
           },
-          
           success (res) {
             const data = res.data
             const result_path = JSON.parse(data)

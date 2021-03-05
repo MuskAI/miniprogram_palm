@@ -46,6 +46,35 @@ Page({
       }
     })
   },
+  gonext(){
+    var that=this
+    wx.uploadFile({
+      url: 'http://123.207.223.60:8000/wxuploadFile', //仅为示例，非真实的接口地址
+      filePath: that.data.imgList[0],
+      name: 'file',
+      formData: {
+        'user': 'test'
+      },
+      success (res) {
+        const data = res.data
+        console.log(res.data)
+        // const result_path = JSON.parse(data)
+        // console.log(result_path)
+        // const result = result_path["diagnose_result"]
+        // app.globalData.result = result
+        // app.globalData.palm_yolo = result_path["diagnose_yolo"]
+        // app.globalData.palm_crop = result_path["diagnose_crop"]
+        // app.globalData.palm_align = result_path["diagnose_align"]            
+        // app.globalData.palm_words = result_path["diagnose_words"]
+        // wx.navigateTo({
+        //   url: '../showResult/showResult',
+        // })
+      },
+      fail (res){ 
+        console.log('upload fail')
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

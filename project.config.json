@@ -66,6 +66,12 @@
         {
           "name": "pages/take_photo/take_photo",
           "pathName": "pages/take_photo/take_photo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
           "scene": null
         }
       ]
