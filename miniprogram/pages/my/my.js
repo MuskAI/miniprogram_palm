@@ -56,7 +56,31 @@ Page({
     })
 
   },
-
+  gouserinfo(){
+    wx.navigateTo({
+      url: '/pages/userInfo/userInfo',
+    })
+  },
+  goreport(){
+    wx.navigateTo({
+      url: '/pages/myreport/myreport',
+    })
+  },
+  showreport(){
+    wx.navigateTo({
+      url: '/pages/showreport/showreport',
+    })
+  },
+  goprofile(){
+    wx.navigateTo({
+      url: '/pages/myprofile/myprofile',
+    })
+  },
+  gohelp(){
+    wx.navigateTo({
+      url: '/pages/help/help',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -102,7 +126,19 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (options) {
+    console.log('share')
+    console.log(options)
+    var that = this
+    return {
+      title: 'AI掌纹诊病',
+      path: '/pages/index/index',
+      success: function (res) {
+        console.log("转发成功:" + JSON.stringify(res));
+      },
+      fail: function (res) {
+        console.log("转发失败:" + JSON.stringify(res));
+      }
+    }
   }
 })

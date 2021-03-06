@@ -1,0 +1,29 @@
+<view class="flex padding bg-white">
+  <view class="text-bold padding-right-xs">健康档案</view>
+  <view class="padding-right-xs">2021年3月6日23:30:20</view>
+  <view class="padding-right-xs">未备注档案</view>
+  <view class="text-green">选择档案</view>
+</view>
+
+<view class="flex padding bg-white">
+  <view class="text-bold padding-right-xs">健康档案</view>
+  <view class="padding-right-xs">2021年3月6日23:30:20</view>
+  <view class="padding-right-xs">李林</view>
+  <view class="text-green">选择档案</view>
+</view>
+<view class="flex padding bg-white">
+  <view class="text-bold padding-right-xs">健康档案</view>
+  <view class="padding-right-xs">2021年3月6日23:30:20</view>
+  <view class="padding-right-xs">汤家凤</view>
+  <view class="text-green">选择档案</view>
+</view>
+<view class="flex padding bg-white">
+  <view class="text-bold padding-right-xs">健康档案</view>
+  <view class="padding-right-xs">2021年3月6日23:30:20</view>
+  <view class="padding-right-xs">张宇</view>
+  <view class="text-green">选择档案</view>
+</view>
+
+<view class="upload margin">
+  <van-button bindtap="gototakephoto" size="large" round color="linear-gradient(to right, #7bcb8d, #7bcb8d)">免费获取我的健康报告</van-button>
+</view>

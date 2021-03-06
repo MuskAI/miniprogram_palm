@@ -1,0 +1,29 @@
+<image src="../../images/health.jpg" mode="widthFix" style="height:380rpx;width:100%"></image>
+<view class="cu-form-group">
+		<view class="title">与您的关系</view>
+		<input class="input" placeholder="请输入关系"></input>
+	</view>
+<view class="cu-form-group">
+		<view class="title">姓名</view>
+		<input class="input" placeholder="请输入姓名"></input>
+  </view>
+  <view class="cu-form-group">
+		<view class="title">性别</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'性别选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">出生日期</view>
+		<picker mode="date" value="{{date}}" start="1900-09-01" end="2020-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+  </view>
+
+<view class="upload margin-top-xl padding margin">
+  <van-button bindtap="create" size="large" round color="linear-gradient(to right, #7bcb8d, #7bcb8d)">创建档案</van-button>
+</view>

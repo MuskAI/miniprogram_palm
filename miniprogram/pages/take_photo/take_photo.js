@@ -1,4 +1,6 @@
 // pages/take_photo/take_photo.js
+const app = getApp()
+
 Page({
 
   /**
@@ -43,6 +45,47 @@ Page({
             imgList: this.data.imgList
           })
         }
+      }
+    })
+  },
+  pushTakePhoto: function () {
+    console.log('ok')
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original'],
+      sourceType: ['album'],
+      success (res) {
+        const tempFilePaths = res.tempFilePaths
+        app.globalData.palm_img = tempFilePaths[0]
+        wx.showLoading({
+          title: 'AI诊断中，请稍等片刻',
+        }),
+        wx.uploadFile({
+          url: 'http://123.207.223.60:8000/wxuploadFile', //仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'file',
+          formData: {
+            'user': 'test'
+          },
+          success (res) {
+            console.log(res)
+            const data = res.data
+            const result_path = JSON.parse(data)
+            console.log(result_path)
+            const result = result_path["diagnose_result"]
+            app.globalData.result = result
+            app.globalData.palm_yolo = result_path["diagnose_yolo"]
+            app.globalData.palm_crop = result_path["diagnose_crop"]
+            app.globalData.palm_align = result_path["diagnose_align"]            
+            app.globalData.palm_words = result_path["diagnose_words"]
+            wx.navigateTo({
+              url: '../showResult/showResult',
+            })
+          },
+          fail (res){ 
+            console.log('upload fail')
+          }
+        })
       }
     })
   },
@@ -93,7 +136,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.hideLoading({
+      success: (res) => {},
+    })
   },
 
   /**

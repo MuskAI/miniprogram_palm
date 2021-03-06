@@ -50,6 +50,10 @@ map,.mapBox{
   background-color: #37d164;
 
 }
+.duiqi{
+  align-items: center;
+  justify-items: left;
+}
 .head{
   height: 160rpx;
   width: 160rpx;

@@ -16,6 +16,12 @@
     "pages/takePhoto/takePhoto",
     "pages/my/my",
     "pages/take_photo/take_photo",
+    "pages/help/help",
+    "pages/myreport/myreport",
+    "pages/myprofile/myprofile",
+    "pages/userInfo/userInfo",
+    "pages/choose/choose",
+    "pages/showreport/showreport",
     "pages/showResult/showResult"
   ],
   "window": {

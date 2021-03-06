@@ -72,6 +72,24 @@
         {
           "name": "pages/my/my",
           "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myprofile/myprofile",
+          "pathName": "pages/myprofile/myprofile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myreport/myreport",
+          "pathName": "pages/myreport/myreport",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/showreport/showreport",
+          "pathName": "pages/showreport/showreport",
           "scene": null
         }
       ]

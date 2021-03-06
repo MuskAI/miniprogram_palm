@@ -1,0 +1,41 @@
+<view class="cu-list menu">
+
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-circlefill text-grey"></text>
+      <text class="text-grey">刘德华</text>
+    </view>
+  </view>
+</view>
+<view class="cu-list menu">
+<view class="cu-item">
+  <view class="content">
+    <text class="cuIcon-circlefill text-grey"></text>
+    <text class="text-grey">汤家凤</text>
+  </view>
+</view>
+</view>
+<view class="cu-list menu">
+<view class="cu-item">
+  <view class="content">
+    <text class="cuIcon-circlefill text-grey"></text>
+    <text class="text-grey">张宇</text>
+  </view>
+</view>
+</view>
+<view class="cu-list menu">
+<view class="cu-item">
+  <view class="content">
+    <text class="cuIcon-circlefill text-grey"></text>
+    <text class="text-grey">李正元</text>
+  </view>
+</view>
+</view>
+<view class="upload margin-top-xl padding margin">
+  <van-button bindtap="choose" size="large" round color="linear-gradient(to right, #7bcb8d, #7bcb8d)">选择档案
+  </van-button>
+</view>
+<view class="upload margin-top-xl padding margin">
+  <van-button bindtap="gocreate" size="large" round color="linear-gradient(to right, #7bcb8d, #7bcb8d)">创建档案
+  </van-button>
+</view>

@@ -1,0 +1,29 @@
+<view class="margin bg-white shadow-warp radius2">
+  <view class="padding margin-top radius2">
+		<textarea maxlength="-1" bindinput="textareaAInput" placeholder="请填写您的意见以及遇到的困难"></textarea>
+  </view>
+  <view class="cu-form-group radius2">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="padding">
+  请输入手机号
+</view>
+<view class="margin padding bg-white shadow-warp radius2">
+<input type="number" class="input bg-white" value="{{mobile}}" bindinput="getmobile" placeholder="请输入您的手机号"></input>
+</view>
+
+<view class="padding flex flex-direction radius2">
+  <button class="cu-btn text-white margin-tb-sm lg radius2" style="background-color:#7bcb8d;" bindtap="confirm">提交</button>
+</view>

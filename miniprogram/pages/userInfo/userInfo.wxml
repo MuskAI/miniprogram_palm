@@ -1,0 +1,57 @@
+<!-- 
+孔启超 2020.4.11 
+内容：个人资料
+-->
+<form>
+	<view class="margin bg-white shadow-warp radius2">
+		<view class="cu-form-group margin-top justify-between radius2">
+			<view class="flex ">
+				头像
+			</view>
+			<view class="cu-avatar xl round" style="background-image:url({{avatarUrl}})">
+			</view>
+		</view>
+		<view class="cu-form-group">
+			<!-- <view class=" text-red text-xl star ">*</view> -->
+			<view class="title">姓名</view>
+			<input class="input text-grey" value="{{nickName}}" placeholder="请输入姓名"  type='text' name="name"
+				bindinput="getname"></input>
+		</view>
+	</view>
+	<view class="action">
+		<button open-type='share' class="btn1 img_share"></button>
+	</view>
+	<view class="margin bg-white shadow-warp radius2 justify-between">
+		<view class="cu-form-group radius2 ">
+			<view class="title">手机号码</view>
+			<view class="flex">
+				<button wx:if="{{userinfo.phone==null}}" open-type="getPhoneNumber" class="bg-blue phone-get"
+					bindgetphonenumber="getPhoneNumber">绑定</button>
+				<view class="text-black" wx:if="{{userinfo.phone!=null}}">{{userinfo.phone}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="margin bg-white shadow-warp radius2">
+		<view class="cu-form-group radius2">
+			<!-- <view class=" text-red text-xl star ">*</view> -->
+			<view class="title">出生日期</view>
+			<input class="input text-grey"
+				value="{{userinfo.company==''||userinfo.company==''?'':userinfo.company}}" placeholder="请输入公司" type='text' name="name"
+				bindinput="getcompany"></input>
+		</view>
+		<view class="cu-form-group radius2">
+			<!-- <view class=" text-red text-xl star ">*</view> -->
+			<view class="title">血型</view>
+			<input class="input text-grey"
+			value="{{userinfo.position==''||userinfo.position==''?'':userinfo.position}}" placeholder="请输入职位" type='text'
+				name="name" bindinput="getposition"></input>
+		</view>
+	</view>
+
+	<view style="height:80rpx"></view>
+	<view class="text-center margin-top">
+		<view class="flex margin-top">
+			<button class="cu-btn round flex-sub bg-blue padding margin-xs" bindtap="commit">保存修改</button>
+		</view>
+	</view>
+</form>

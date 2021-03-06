@@ -11,7 +11,7 @@
   <view class="padding">您上传的照片仅程序内部可见</view>
 </view>
 
-<view class="grid col-2 grid-square flex-sub" style="position:relative;left:180rpx">
+<!-- <view class="grid col-2 grid-square flex-sub" style="position:relative;left:180rpx">
   <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
     <image src='{{imgList[index]}}' mode='aspectFit'></image>
     <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
@@ -21,6 +21,6 @@
   <view class="solids bg-white" bindtap="ChooseImage" wx:if="{{imgList.length<1}}">
     <text class="cuIcon-cameraadd"></text>
   </view>
-</view>
-
-<button class="text-white" style="background-color:#41c8a4;width:600rpx" bindtap="gonext">下一步</button>
+</view> -->
+<view style="height:80rpx"></view>
+<button class="text-white" style="background-color:#41c8a4;width:600rpx" bindtap="pushTakePhoto">拍照上传检验</button>
